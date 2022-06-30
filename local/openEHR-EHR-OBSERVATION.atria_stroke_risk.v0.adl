@@ -56,7 +56,7 @@ Råvärden genereras med hjälp av separata arketyper för respektive faktor. Sj
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"C9128E3264B54AA5671BE9A570FAC8B9">
+		["MD5-CAM-1.0.1"] = <"00002ad33899f4bd9fb5f809e79d0bad">
 		["build_uid"] = <"930d8019-cdc5-4b05-91bb-27d1bf6b75ae">
 		["revision"] = <"0.0.1-alpha">
 	>
