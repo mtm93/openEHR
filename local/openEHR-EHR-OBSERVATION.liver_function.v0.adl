@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4abb3a064ef88d4333a43c54676e0a7d">
+		["MD5-CAM-1.0.1"] = <"1fb5a3d5a9d6b0a7cde0c99f8aae9de2">
 		["build_uid"] = <"89c1bca7-6b31-3c13-8b3f-f15c4cd74c50">
 	>
 
@@ -49,12 +49,30 @@ definition
 											>
 										}
 									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- ALT
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- AST
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- GGT
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
 								}
 							}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {*}    -- Item tree
 		}
 	}
 
@@ -85,6 +103,22 @@ ontology
 				["[iU]/L"] = <
 					text = <"IU/L">
 					description = <"@ units @">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"ALT">
+					description = <"Alanine Transaminase">
+				>
+				["at0008"] = <
+					text = <"AST">
+					description = <"Aspartate Aminotransferase">
+				>
+				["at0009"] = <
+					text = <"GGT">
+					description = <"Gamma-glutamyl Tansferase">
 				>
 			>
 		>
