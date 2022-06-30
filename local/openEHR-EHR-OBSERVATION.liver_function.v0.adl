@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b1a530a6fc36ed7fc589c75731029ac4">
+		["MD5-CAM-1.0.1"] = <"4abb3a064ef88d4333a43c54676e0a7d">
 		["build_uid"] = <"89c1bca7-6b31-3c13-8b3f-f15c4cd74c50">
 	>
 
@@ -34,7 +34,23 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- ALP
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"[iU]/L">
+														magnitude = <|0.0..999.0|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -61,6 +77,14 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"ALP">
+					description = <"Alkaline Phosphatase">
+				>
+				["[iU]/L"] = <
+					text = <"IU/L">
+					description = <"@ units @">
 				>
 			>
 		>
