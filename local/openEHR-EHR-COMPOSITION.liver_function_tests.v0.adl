@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c983ab3f576bf45cb6d7641d62a9dba0">
+		["MD5-CAM-1.0.1"] = <"f3496431aa422e4f4853516607920898">
 		["build_uid"] = <"ce0076db-1fbc-337f-84f1-15bf573204f3">
 	>
 
@@ -38,6 +38,12 @@ definition
 		}
 		context matches {
 			EVENT_CONTEXT[at0002] matches {*}    -- Event Context
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0005] occurrences matches {0..*} matches {    -- Alkaline Phosphatase (ALP)
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.laboratory_test_result\.v1/}
+			}
 		}
 	}
 
@@ -55,6 +61,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Event Context">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Alkaline Phosphatase (ALP)">
 					description = <"">
 				>
 			>
