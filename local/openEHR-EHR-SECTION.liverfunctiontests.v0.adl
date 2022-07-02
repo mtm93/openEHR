@@ -23,20 +23,31 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3773d3927e0a7fab8efdee093d90d7b1">
+		["MD5-CAM-1.0.1"] = <"91667cab90d332d904070e3d2e9558c3">
 		["build_uid"] = <"6df7bfc7-a959-3f18-a37b-dd6227827c35">
 	>
 
 definition
-	SECTION[at0000] matches {*}    -- LiverFunctionTests
+	SECTION[at0000] matches {    -- Liver Function Tests
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {    -- Test
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.laboratory_test_result\.v1/}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"LiverFunctionTests">
+					text = <"Liver Function Tests">
 					description = <"LiverFunctionTests">
+				>
+				["at0001"] = <
+					text = <"Test">
+					description = <"">
 				>
 			>
 		>
