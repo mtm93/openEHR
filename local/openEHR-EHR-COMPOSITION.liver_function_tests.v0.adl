@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f3496431aa422e4f4853516607920898">
+		["MD5-CAM-1.0.1"] = <"9972ecd8182714f7757a05d486bf0775">
 		["build_uid"] = <"ce0076db-1fbc-337f-84f1-15bf573204f3">
 	>
 
@@ -36,13 +36,26 @@ definition
 				}
 			}
 		}
-		context matches {
-			EVENT_CONTEXT[at0002] matches {*}    -- Event Context
-		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0005] occurrences matches {0..*} matches {    -- Alkaline Phosphatase (ALP)
+			allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {    -- Alanine Transaminase (ALT)
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.laboratory_test_result\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.alanine_transaminase\.v1/}
+			}
+			allow_archetype OBSERVATION[at0008] occurrences matches {0..*} matches {    -- Alkaline Phosphatase (ALP)
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.alkaline_phosphatase\.v1/}
+			}
+			allow_archetype OBSERVATION[at0009] occurrences matches {0..*} matches {    -- Total Protein (TP)
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.total_protein\.v1/}
+			}
+			allow_archetype OBSERVATION[at0010] occurrences matches {0..*} matches {    -- Aspartate Aminotransferase (AST)
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.aspartate_aminotransferase\.v1/}
+			}
+			allow_archetype OBSERVATION[at0011] occurrences matches {0..*} matches {    -- Gamma-Glutamyl Transferase (GGT)
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.gamma-glutamyl_transferase\.v1/}
 			}
 		}
 	}
@@ -59,12 +72,24 @@ ontology
 					text = <"Coded text">
 					description = <"">
 				>
-				["at0002"] = <
-					text = <"Event Context">
+				["at0006"] = <
+					text = <"Alanine Transaminase (ALT)">
 					description = <"">
 				>
-				["at0005"] = <
+				["at0008"] = <
 					text = <"Alkaline Phosphatase (ALP)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Total Protein (TP)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Aspartate Aminotransferase (AST)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Gamma-Glutamyl Transferase (GGT)">
 					description = <"">
 				>
 			>
