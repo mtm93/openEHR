@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9972ecd8182714f7757a05d486bf0775">
+		["MD5-CAM-1.0.1"] = <"c47eba4f3dc09c816008287759e60efb">
 		["build_uid"] = <"ce0076db-1fbc-337f-84f1-15bf573204f3">
 	>
 
@@ -37,17 +37,17 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {    -- Alanine Transaminase (ALT)
+			allow_archetype OBSERVATION[at0009] occurrences matches {0..*} matches {    -- Total Protein (TP)
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.alanine_transaminase\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.total_protein\.v1/}
 			}
 			allow_archetype OBSERVATION[at0008] occurrences matches {0..*} matches {    -- Alkaline Phosphatase (ALP)
 				include
 					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.alkaline_phosphatase\.v1/}
 			}
-			allow_archetype OBSERVATION[at0009] occurrences matches {0..*} matches {    -- Total Protein (TP)
+			allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {    -- Alanine Transaminase (ALT)
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.total_protein\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.alanine_transaminase\.v1/}
 			}
 			allow_archetype OBSERVATION[at0010] occurrences matches {0..*} matches {    -- Aspartate Aminotransferase (AST)
 				include
