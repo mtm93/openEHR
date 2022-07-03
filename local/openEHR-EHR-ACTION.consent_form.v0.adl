@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6b81313c6dcb16606af4f94de06958c0">
+		["MD5-CAM-1.0.1"] = <"29624bd431c5d21ae4e77a9adbb686f5">
 		["build_uid"] = <"a2d84d83-cc4d-3cb4-8ef4-3cb61b33cbf9">
 	>
 
@@ -202,6 +202,16 @@ definition
 							DV_DATE_TIME matches {*}
 						}
 					}
+					ELEMENT[at0062] matches {    -- Patient Identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0063] matches {    -- Staff Identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -295,7 +305,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Donor Acceptance Criteria">
-					description = <"Consent Form">
+					description = <"A consent form to be agreed by the patient for donor criteria, and agreement for transplant waiting list registration">
 				>
 				["at0001"] = <
 					text = <"Item tree">
@@ -483,6 +493,14 @@ ontology
 				>
 				["at0061"] = <
 					text = <"Reason">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Patient Identifier">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Staff Identifier">
 					description = <"">
 				>
 			>
