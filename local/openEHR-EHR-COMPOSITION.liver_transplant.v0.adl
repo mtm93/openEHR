@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e3a289329f548dbff5581f8878233472">
+		["MD5-CAM-1.0.1"] = <"bbf28b08bdb0473bd5402c3f98ed3b4d">
 		["build_uid"] = <"a2228a39-f303-3302-847d-57bbaca28661">
 	>
 
@@ -41,6 +41,13 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.liverfunctiontests\.v0/}
 			}
+			allow_archetype ACTION[at0005] occurrences matches {0..*} matches {    -- Waiting List Consent Form
+				include
+					archetype_id/value matches {/openEHR-EHR-ACTION\.consent_form\.v0/}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT[at0004] matches {*}    -- Event Context
 		}
 	}
 
@@ -58,6 +65,14 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Liver Function Test Results">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Event Context">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Waiting List Consent Form">
 					description = <"">
 				>
 			>
