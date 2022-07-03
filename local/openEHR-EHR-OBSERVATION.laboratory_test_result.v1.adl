@@ -291,7 +291,7 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6FF739561BD390420231096ACAD27FC3">
+		["MD5-CAM-1.0.1"] = <"c73f921b1e879521a88415b72783e4b5">
 		["build_uid"] = <"e047d44a-d646-4eed-a227-59f20f4ebef4">
 		["revision"] = <"1.2.2">
 	>
@@ -307,7 +307,15 @@ definition
 								items cardinality matches {1..*; unordered} matches {
 									ELEMENT[at0005] matches {    -- Test name
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0129,    -- Serum Sodium
+													at0130,    -- Prothrombin Time Test and INR (PT/INR)
+													at0131,    -- Bilirubin Test
+													at0132]    -- Serum Creatinine
+												}
+											}
 										}
 									}
 									allow_archetype CLUSTER[at0065] occurrences matches {0..*} matches {    -- Specimen detail
@@ -663,6 +671,22 @@ Coding with a terminology is desirable, where possible.  (en)">
 					description = <"*A structured or complex diagnosis for the laboratory test. (en)">
 					comment = <"*For example: Anatomical pathology diagnoses consisting of several different axes such as morphology, etiology and function. (en)">
 				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
+				>
 			>
 		>
 		["en"] = <
@@ -867,6 +891,22 @@ Coding with a terminology is desirable, where possible.">
 					text = <"Structured test diagnosis">
 					description = <"A structured or complex diagnosis for the laboratory test.">
 					comment = <"For example: Anatomical pathology diagnoses consisting of several different axes such as morphology, etiology and function.">
+				>
+				["at0129"] = <
+					text = <"Serum Sodium">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"Prothrombin Time Test and INR (PT/INR)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"Bilirubin Test">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"Serum Creatinine">
+					description = <"">
 				>
 			>
 		>
@@ -1075,6 +1115,22 @@ Koding med en terminologi er ønskelig, der det er mulig.">
 					description = <"En strukturert eller kompleks diagnose for laboratorieundersøkelsen.">
 					comment = <"For eksempel patologidiagnoser bestående av flere forskjellige akser som morfologi, etiologi og funksjon.">
 				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
+				>
 			>
 		>
 		["zh-cn"] = <
@@ -1280,6 +1336,22 @@ Coding with a terminology is desirable, where possible.  (en)">
 					description = <"*A structured or complex diagnosis for the laboratory test. (en)">
 					comment = <"*For example: Anatomical pathology diagnoses consisting of several different axes such as morphology, etiology and function. (en)">
 				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -1484,6 +1556,22 @@ Bekannte Schwierigkeiten bei der Probenentnahme oder -behandlung, wie z.B. die \
 					description = <"Eine strukturierte oder komplexe Diagnose für die Laboruntersuchung.">
 					comment = <"Zum Beispiel: Anatomische Pathologiediagnosen, die aus mehreren verschiedenen Schwerpunkten wie Morphologie, Ätiologie und Funktion zusammengesetzt sind.">
 				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
+				>
 			>
 		>
 		["it"] = <
@@ -1682,6 +1770,22 @@ Ove possibile, è auspicabile una codifica con una terminologia.">
 					description = <"Una diagnosi strutturata o complessa per il test di laboratorio.">
 					comment = <"Per esempio: Le diagnosi di anatomia patologica che consistono in molteplici assi diversi, come la morfologia, l'eziologia e la funzione. ">
 				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
+				>
 			>
 		>
 		["nl"] = <
@@ -1849,6 +1953,22 @@ Ove possibile, è auspicabile una codifica con una terminologia.">
 				["at0122"] = <
 					text = <"*Structured test diagnosis(en)">
 					description = <"*A structured or complex diagnosis for the laboratory test.(en)">
+				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
 				>
 			>
 		>
@@ -2066,6 +2186,22 @@ Kodning med en terminologi är önskvärt där det är möjligt.
 					text = <"Strukturerad diagnos">
 					description = <"En strukturerad eller komplex diagnos för laboratorieundersökningen.">
 					comment = <"Till exempel: Anatomiska patologidiagnoser bestående av flera olika axlar som morfologi, etiologi och funktion.">
+				>
+				["at0129"] = <
+					text = <"*Serum Sodium (en)">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"*Prothrombin Time Test and INR (PT/INR) (en)">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"*Bilirubin Test (en)">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"*Serum Creatinine (en)">
+					description = <"">
 				>
 			>
 		>
