@@ -23,36 +23,41 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3aee676de4468a921e2d046962612741">
+		["MD5-CAM-1.0.1"] = <"94e64a81b6ee2980795da338e3b04cbb">
 		["build_uid"] = <"1390d6f8-d7eb-31db-a899-b5d2ed3c2ba1">
 	>
 
 definition
 	SECTION[at0000] matches {    -- UKELD Score
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {    -- Serum Sodium
+			allow_archetype OBSERVATION[at0001] matches {    -- Serum Sodium
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {    -- INR Test
+			allow_archetype OBSERVATION[at0002] matches {    -- INR Test
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {    -- Serum Bilirubin
+			allow_archetype OBSERVATION[at0003] matches {    -- Serum Bilirubin
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype OBSERVATION[at0004] occurrences matches {0..*} matches {    -- Serum Creatinine
+			allow_archetype OBSERVATION[at0004] matches {    -- Serum Creatinine
 				include
 					archetype_id/value matches {/.*/}
 			}
-			ADMIN_ENTRY[at0009] occurrences matches {0..1} matches {    -- UKELD Score
+			ADMIN_ENTRY[at0009] matches {    -- UKELD Score
 				data matches {
 					ITEM_TREE[at0008] matches {    -- Item tree
 						items cardinality matches {0..*; unordered} matches {
-							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Score
+							ELEMENT[at0010] matches {    -- Score
 								value matches {
 									DV_QUANTITY matches {*}
+								}
+							}
+							ELEMENT[at0011] matches {    -- Timestamp
+								value matches {
+									DV_DATE_TIME matches {*}
 								}
 							}
 						}
@@ -96,6 +101,10 @@ ontology
 				>
 				["at0010"] = <
 					text = <"Score">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Timestamp">
 					description = <"">
 				>
 			>
