@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bbf28b08bdb0473bd5402c3f98ed3b4d">
+		["MD5-CAM-1.0.1"] = <"c116f66330cd195db032c81b5e7d6996">
 		["build_uid"] = <"a2228a39-f303-3302-847d-57bbaca28661">
 	>
 
@@ -46,9 +46,6 @@ definition
 					archetype_id/value matches {/openEHR-EHR-ACTION\.consent_form\.v0/}
 			}
 		}
-		context matches {
-			EVENT_CONTEXT[at0004] matches {*}    -- Event Context
-		}
 	}
 
 ontology
@@ -65,10 +62,6 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Liver Function Test Results">
-					description = <"">
-				>
-				["at0004"] = <
-					text = <"Event Context">
 					description = <"">
 				>
 				["at0005"] = <
