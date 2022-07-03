@@ -1,0 +1,464 @@
+archetype (adl_version=1.4; uid=e38b8347-a454-44c2-8aa6-f38309df003e)
+	openEHR-EHR-ACTION.consent_form.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-07-03">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8837201b4d91098174636ad760f87d63">
+		["build_uid"] = <"a2d84d83-cc4d-3cb4-8ef4-3cb61b33cbf9">
+	>
+
+definition
+	ACTION[at0000] matches {    -- Donor Acceptance Criteria
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0009] occurrences matches {0..1} matches {    -- Accept Brain Cancer Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0010] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0012] occurrences matches {0..1} matches {    -- Accept History of Cancer Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0014] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0016] occurrences matches {0..1} matches {    -- Accept IV Drug Use Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0017] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0018] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0019] occurrences matches {0..1} matches {    -- Accept High Risk Behaviour Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0020] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0021] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0022] occurrences matches {0..1} matches {    -- Accept Split Liver
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0023] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0024] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0025] occurrences matches {0..1} matches {    -- Accept Hepatitis B (HBCAB Positive) Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0026] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0027] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0028] occurrences matches {0..1} matches {    -- Accept Hepatitis C (Antibody Positive RNA Negative) Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0029] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0030] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0031] occurrences matches {0..1} matches {    -- Accept NRP/NESLiP Liver
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0032] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0033] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0034] occurrences matches {0..1} matches {    -- Consented for Hepatitis C - RNA Positive Donor
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0035] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0036] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0037] occurrences matches {0..1} matches {    -- Consented to Liver Transplant Registration
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0038] matches {    -- Choice
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0039] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Consent Document Used
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Review Date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0049] matches {    -- Informed consent requested
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0050]    -- Informed consent requested
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0051] matches {    -- Informed consent obtained
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0052]    -- Informed consent provided
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0053] matches {    -- Informed consent not obtained
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::533]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0054]    -- Informed consent not obtained
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0055] matches {    -- Informed consent refused
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::531]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0056]    -- Informed consent refused
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0057] matches {    -- Informed consent withdrawn
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::528]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0058]    -- Informed consent withdrawn
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Donor Acceptance Criteria">
+					description = <"Consent Form">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Consent Document Used">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Review Date">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Accept Brain Cancer Donor">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Accept History of Cancer Donor">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Accept IV Drug Use Donor">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Accept High Risk Behaviour Donor">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Accept Split Liver">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Accept Hepatitis B (HBCAB Positive) Donor">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Accept Hepatitis C (Antibody Positive RNA Negative) Donor">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Accept NRP/NESLiP Liver">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Consented for Hepatitis C - RNA Positive Donor">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Consented to Liver Transplant Registration">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Choice">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Informed consent requested">
+					description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received.">
+				>
+				["at0050"] = <
+					text = <"Informed consent requested">
+					description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received.">
+				>
+				["at0051"] = <
+					text = <"Informed consent obtained">
+					description = <"Informed consent has been provided by the patient or patient's agent.">
+				>
+				["at0052"] = <
+					text = <"Informed consent provided">
+					description = <"Informed consent has been provided by the patient or patient's agent.">
+				>
+				["at0053"] = <
+					text = <"Informed consent not obtained">
+					description = <"Informed consent was not obtainable from either the patient or patient's advocate.">
+				>
+				["at0054"] = <
+					text = <"Informed consent not obtained">
+					description = <"Informed consent was not obtainable from either the patient or patient's advocate.">
+				>
+				["at0055"] = <
+					text = <"Informed consent refused">
+					description = <"In response to a request for informed consent, it has been refused by patient or patient's agent.">
+				>
+				["at0056"] = <
+					text = <"Informed consent refused">
+					description = <"In response to a request for informed consent, it has been refused by patient or patient's agent.">
+				>
+				["at0057"] = <
+					text = <"Informed consent withdrawn">
+					description = <"Following initial provision of informed consent, it has been withrawn by the patient or patient's agent.">
+				>
+				["at0058"] = <
+					text = <"Informed consent withdrawn">
+					description = <"Following initial provision of informed consent, it has been withrawn by the patient or patient's agent.">
+				>
+			>
+		>
+	>
