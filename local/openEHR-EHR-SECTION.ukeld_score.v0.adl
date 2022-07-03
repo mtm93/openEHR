@@ -1,0 +1,103 @@
+archetype (adl_version=1.4; uid=1a2a310e-7474-44bf-af9f-3013a8b83ecc)
+	openEHR-EHR-SECTION.ukeld_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-07-03">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3aee676de4468a921e2d046962612741">
+		["build_uid"] = <"1390d6f8-d7eb-31db-a899-b5d2ed3c2ba1">
+	>
+
+definition
+	SECTION[at0000] matches {    -- UKELD Score
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {    -- Serum Sodium
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {    -- INR Test
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {    -- Serum Bilirubin
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype OBSERVATION[at0004] occurrences matches {0..*} matches {    -- Serum Creatinine
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ADMIN_ENTRY[at0009] occurrences matches {0..1} matches {    -- UKELD Score
+				data matches {
+					ITEM_TREE[at0008] matches {    -- Item tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Score
+								value matches {
+									DV_QUANTITY matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"UKELD Score">
+					description = <"UKELD Score">
+				>
+				["at0001"] = <
+					text = <"Serum Sodium">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"INR Test">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Serum Bilirubin">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Serum Creatinine">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"UKELD Score">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Score">
+					description = <"">
+				>
+			>
+		>
+	>
